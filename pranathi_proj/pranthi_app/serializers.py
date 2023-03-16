@@ -10,7 +10,6 @@ class RegistrationSerializer(serializers.ModelSerializer):
         user = CustomUser(
             username = validated_data['username'],
             email = validated_data['email'],
-            uuid_field = uuid.uuid4(),
             phone_no = validated_data['phone_no'],
         )
         user.set_password(validated_data['password'])

@@ -8,7 +8,7 @@ from datetime import date
 class CustomUser(AbstractUser):
   username = models.CharField(max_length = 50, blank = True, null = True, unique = True)
   email = models.EmailField(_('email address'), unique = True)
-  uuid_field = models.UUIDField(null=False,primary_key=True)
+  uuid_field = models.UUIDField(null=False,primary_key=True,default=uuid.uuid4, editable=False)
   phone_no = models.CharField(max_length = 10,db_index=True)
   USERNAME_FIELD = 'email'
   REQUIRED_FIELDS = ['phone_no','username']
