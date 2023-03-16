@@ -1,0 +1,12 @@
+End points
+1)Registration#ip://registration
+type of Request: Post Request
+parameters:Username,phone number, email, password
+2)Login#ip://login
+type of Request: Post Request
+parameters:phone number (or) email in username and password
+3)Logout#ip://logout
+type of Request: Post Request
+parameters:takes none arguments internally it takes request user currently logged in and makes logout
+4)Admin#ip://admin
+Django default provided admin screen added CustomUser Model.
